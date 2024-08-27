@@ -125,7 +125,7 @@ ul > li:hover {
     color: var(--soft-red);
 }
 
-ul {
+.active {
     display: flex;
     gap: 2.8em;
 }
@@ -149,21 +149,73 @@ button:hover {
     color: var(--white);
 }
 
-@media (min-width: 1024px) {
-    nav {
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 4em 0;
+}
+
+body {
+    padding: 4em 10%;
+}
+
+@media (max-width: 542px) {
+    .hidden {
+        display: none;
+    }
+
+    .active {
         display: flex;
-        justify-content: space-between;
-        padding: 0 0 4em 0;
+        flex-direction: column;
+        margin: 0;
+        position: relative;
+
+    }
+
+    #menu {
+        display: block;
     }
 
     body {
-        padding: 4em 10%;
+        padding: 4em 1%;
     }
-}
+    
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 3.2em;
+    }
 
-@media (max-width: 375px) {
-    .card-reco {
+    #recommended {
         display: flex;
         flex-direction: column;
+        gap: 1.2em;
+    }
+
+    #new-card {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+    }
+
+    #info-latest-container {
+        display: flex;
+        padding: 1em 0;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    #image-container > img {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+    }
+
+    #latest {
+        grid-column: 1 / 3;
     }
 }
