@@ -62,17 +62,19 @@ p, li {
 }
 
 #recommended {
-    display: flex;
+    display: grid;
     grid-column: 1 / 3;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .info-reco {
-    padding: 1em;
+    padding: 0 1em;
 }
 
 .number {
     color: var(--soft-red);
     font-size: 2.4em;
+    margin: 0;
 }
 
 .card-reco {
@@ -80,15 +82,15 @@ p, li {
 }
 
 .card-reco > img {
-    width: 215px;
-    height: 270px;
+    width: 120px;
+    height: 170px;
     object-fit: cover;
 }
 
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 2em;
+    gap: 3.2em;
 }
 
 #image-container > img {
@@ -97,17 +99,19 @@ main {
 
 #info-latest-container {
     display: flex;
+    padding: 1em 0;
+    gap: 2em;
 }
 
 #info-latest-container > div {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: start;
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 3.8vw;
     font-weight: 800;
     margin: 0;
 }
@@ -153,7 +157,7 @@ button:hover {
     }
 
     body {
-        padding: 4em 8em;
+        padding: 4em 10%;
     }
 }
 
