@@ -3,6 +3,32 @@
     src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
 
+:root {
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+
+    --white: hsl(36, 100%, 99%);
+    --light-gray: hsl(233, 8%, 79%);
+    --medium-gray: hsl(236, 13%, 42%);
+    --dark-blue-grey: hsl(240, 100%, 5%);
+}
+
 body {
+    background-color: var(--white);
     font-family: "Inter";
+}
+
+p, li {
+    font-size: 15px;
+    color: var(--medium-gray);
+}
+
+@media (max-width: 1440px) {
+    nav {
+        display: flex;
+    }
+}
+
+@media (max-width: 375px) {
+    
 }
