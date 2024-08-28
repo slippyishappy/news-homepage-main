@@ -125,7 +125,7 @@ ul > li:hover {
     color: var(--soft-red);
 }
 
-.active {
+ul {
     display: flex;
     gap: 2.8em;
 }
@@ -159,7 +159,12 @@ body {
     padding: 4em 10%;
 }
 
+#menu, #menu-close {
+    display: none;
+}
+
 @media (max-width: 542px) {
+
     .hidden {
         display: none;
     }
@@ -169,11 +174,6 @@ body {
         flex-direction: column;
         margin: 0;
         position: relative;
-
-    }
-
-    #menu {
-        display: block;
     }
 
     body {
