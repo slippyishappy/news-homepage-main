@@ -1,16 +1,18 @@
 const menu = document.querySelector("#menu");
 const menuClose = document.querySelector("#menu-close");
-const tabs = document.querySelector("#tabs");
+const mobileMenu = document.querySelector("#mobile-menu");
 
-if (window.innerWidth <= 542) {
-    tabs.classList.remove("active");
-    tabs.classList.add("hidden");
-    menu.style = "display: block;"
+menu.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+});
 
-    menu.addEventListener("click", () => {
-        tabs.classList.toggle("active");        
-        tabs.classList.toggle("hidden");
-    });
-}
+menuClose.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+});
 
-
+// Close mobile menu when clicking outside
+document.addEventListener("click", (event) => {
+  if (!mobileMenu.contains(event.target) && event.target !== menu && !menu.contains(event.target)) {
+    mobileMenu.classList.remove("active");
+  }
+});
